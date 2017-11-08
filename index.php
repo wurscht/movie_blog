@@ -38,7 +38,7 @@
   <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
       <div class="navbar-header">
-		<a class="navbar-brand"><?php echo "Blog (Namen einsetzen...)"; ?></a>
+		<a class="navbar-brand"><?php echo "Movie Blog"; ?></a>
       </div>
       <ul class="nav navbar-nav">
 		<?php 
