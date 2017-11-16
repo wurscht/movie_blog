@@ -1,11 +1,8 @@
 <?php
-// Alle Blogeinträge holen, die Blog-ID ist in der Variablen $blogId gespeichert
-// Hier Code....
+  // Alle Blogeinträge holen, die Blog-ID ist in der Variablen $blogId gespeichert (wird in index.php gesetzt)
+  // Hier Code... (Schlaufe über alle Einträge dieses Blogs)
 
-// Schlaufe über alle Einträge dieses Blogs
-// Hier Code....
-
-// Nachfolgend das Beispiel einer Ausgabe in HTML, dieser Teil muss mit einer Schlaufe über alle Blog-Beiträge und der Ausgabe mit PHP ersetzt werden
+  // Nachfolgend das Beispiel einer Ausgabe in HTML, dieser Teil muss mit einer Schlaufe über alle Blog-Beiträge und der Ausgabe mit PHP ersetzt werden
 ?>
     <div>
         <h4>Hipster Ipsum, 01.11.2016 16:42:12</h4>
@@ -13,11 +10,11 @@
     </div>
     <?php
     $bid = $blogId;
-     $entries = getEntries($bid)
+    $entries = getEntries($bid)
     ?>
     <!-- ohne Tabelle -->
     <?php if (empty($entry)): ?>
-    <h2 class="item title">Hoopla! Keine Blogeinträge gefunden.</h2>
+        <h2 class="item title">Hoopla! Keine Blogeinträge gefunden.</h2>
     <?php else: ?>
         <?php foreach ($entries as $entry): ?>
             <?=$entry->title?>
