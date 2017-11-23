@@ -18,12 +18,4 @@
 	else return 0;
   }
 
-  // Holt die User Id aus einer Session
-  function getUserIdFromSession()
-    if (isset($_SESSION['uid'])) {
-      return $_SESSION['uid'] ;
-    else {
-      return 0;
-      }
-    }
 ?>
