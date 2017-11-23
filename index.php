@@ -4,6 +4,8 @@ require_once("include/functions.php");
 require_once("include/functions_db.php");
 require_once("include/functions_db_plus.php");
 define("DBNAME", "db/blog.db");
+// Prüfung ob User eingeloggt ist
+$userId = getUserIdFromSession();
 // Datenbankverbindung herstellen, diesen Teil nicht ändern!
 if (!file_exists(DBNAME)) exit("Die Datenbank 'blog.db' konnte nicht gefunden werden!");
 $db = new SQLite3(DBNAME);
