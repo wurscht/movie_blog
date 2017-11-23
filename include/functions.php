@@ -14,8 +14,7 @@
 
   // Prüft, ob der Benutzer angemeldet ist
   function getUserIdFromSession() {
-	if (isset($_SESSION['uid'])) return $_SESSION['uid'];
+	if (isset($_SESSION['userId'])) return $_SESSION['userId'];
 	else return 0;
   }
-
 ?>

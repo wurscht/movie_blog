@@ -49,7 +49,7 @@ else $blogId = 0;
               echo "<li><a href='index.php?function=login&bid=$blogId'>Login</a></li>";
               echo "<li><a href='index.php?function=blogs&bid=$blogId'>Blog wählen</a></li>";
               echo "<li><a href='index.php?function=entries_public&bid=$blogId'>Beiträge anzeigen</a></li>";
-            } elseif ($userId == $_SESSION['uid']) {
+            } else {
               echo "<li><a href='index.php?function=blogs&bid=$blogId'>Blog wählen</a></li>";
               echo "<li><a href='index.php?function=entries_public&bid=$blogId'>Beiträge anzeigen</a></li>";
               echo "<li><a href='index.php?function=logout&bid=$blogId'>Logout</a></li>";
