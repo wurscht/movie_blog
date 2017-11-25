@@ -19,6 +19,6 @@
     else
         foreach ($entries as $entry){
             echo "<h2>".$entry['title'].", ".gmdate("Y.m.d, H:i:s", $entry['datetime'])."</h2><br>";
-            echo $entry['content'];
+            echo nl2br($entry['content']);
     }
 ?>
