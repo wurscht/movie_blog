@@ -13,6 +13,8 @@
         }
     }
 
+    
+
     if (empty($entries)){
         echo "<h2>Hoopla! Keine Blogeinträge gefunden.</h2>";
         }
@@ -20,5 +22,12 @@
         foreach ($entries as $entry){
             echo "<h2>".$entry['title'].", ".gmdate("Y.m.d, H:i:s", $entry['datetime'])."</h2><br>";
             echo nl2br($entry['content']);
+            echo '<form method="post">';
+            echo '<input type="submit" name="delete-entry" id="delete-entry" value="Lösche diesen Beitrag" /><br/>';
+            echo '</form>';
+            // if (isset($_POST['delete-entry'])) {
+            //    deleteEntry($entry['eid']);
+            //    echo "wurscht";
+            //}
     }
 ?>
