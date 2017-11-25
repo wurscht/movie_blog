@@ -4,12 +4,12 @@
   $passwort = "";
 
 // Prüft, meldet den Benutzer an
-    if (isset($_POST)) {
+    if (isset($_POST['email']) and isset($_POST['passwort'])) {
         if (getUserIdFromDb($_POST['email'], $_POST['passwort']) == 0) {
             echo "Fehler";
         } elseif (getUserIdFromDb($_POST['email'], $_POST['passwort']) > 0) {
             $_SESSION['userId'] = getUserIdFromDb($_POST['email'], $_POST['passwort']);
-            echo "Wurst";
+            header ("Location: index.php?function=blogs&bid=0");
         }
     }
   // $_SERVER['PHP_SELF'] = login.php in diesem Fall (also die PHP-Datei, die gerade ausgeführt wird).
