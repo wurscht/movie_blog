@@ -23,11 +23,13 @@
             echo "<h2>".$entry['title'].", ".gmdate("Y.m.d, H:i:s", $entry['datetime'])."</h2><br>";
             echo nl2br($entry['content']);
             echo '<form method="post">';
-            echo '<input type="submit" name="delete-entry" id="delete-entry" value="Lösche diesen Beitrag" /><br/>';
+            echo '<button type="submit" name="delete-entry" value=' . $entry['eid'] . 'id="delete-entry">Lösche diesen Beitrag</button>';
             echo '</form>';
-            // if (isset($_POST['delete-entry'])) {
-            //    deleteEntry($entry['eid']);
-            //    echo "wurscht";
-            //}
+        } 
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset($_POST['delete-entry'])) {
+            deleteEntry($entry['eid']);
+            // header("Location: index.php?function=blogs&bid=" . $blogId);
+        }
     }
 ?>
