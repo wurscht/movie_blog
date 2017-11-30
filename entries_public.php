@@ -1,3 +1,4 @@
+
 <?php
   // Alle Blogeinträge holen, die Blog-ID ist in der Variablen $blogId gespeichert (wird in index.php gesetzt)
   // Hier Code... (Schlaufe über alle Einträge dieses Blogs)
@@ -13,10 +14,8 @@
         }
     }
 
-    
-
     if (empty($entries)){
-        echo "<h2>Hoopla! Keine Blogeinträge gefunden.</h2>";
+        echo "<h2>Hoooopla! Keine Blogeinträge gefunden.</h2>";
         }
     else
         foreach ($entries as $entry){
@@ -33,3 +32,12 @@
         }
     }
 ?>
+
+<!--include "connection file";
+$query = "SELECT * FROM Blog";
+$result = mysqli_query($query);
+$num_results = mysqli_num_rows($result);
+for($i=0; $i<$num_results; $i++) {
+$row = mysqli_fetch_assoc($result);
+echo "<div class='blogEntry'><h4>" . $row['title'] . "</h4><h5>" . $row['date'] . "</h5><p>" . $row['text'] . "</p></div>";
+} -->
