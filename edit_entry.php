@@ -3,17 +3,15 @@
 $entries = getEntries($blogId);
 $blogs = getUserNames();
 
-foreach ($blogs as $blog) {
-    if ($blog['uid'] == $blogId) {
-        //echo "<p>" . $blog['name']."</p>";
-    }
-}
-
 foreach ($entries as $entry){
     $titel = $entry['title'];
     $inhlat = $entry['content'];
 }
 
+if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
+    updateEntry($userId, $_POST['titel'], $_POST['inhalt']);
+    header ("Location: index.php?function=entries_public");
+}
 ?>
 
 <form method="post" action="">
