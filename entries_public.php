@@ -15,21 +15,21 @@
             echo '</div>';
         }
     }
-
+    echo '<div class="container">';
     echo '<div class="row">';
-    echo '<div class="col col-md-4">';
+    echo '<div class="col col-sm-4">';
 
     foreach ($entries as $entry){
-        echo '<a href="index.php?function=entries_public&eid="' . $entry['eid'] . '">';
+        echo '<a href="index.php?function=entries_public&bid=' . $blog['uid'] . '&eid="' . $entry['eid'] . '">';
         echo '<div class="entry" value="' . $entry['eid'] .'">';
-        echo "<h4>".$entry['title'].", ".gmdate("Y.m.d, H:i:s", $entry['datetime'])."</h4><br>";
+        echo "<h4>".$entry['title'].", ".gmdate("Y.m.d, H:i:s", $entry['datetime'])."</h4>";
         echo nl2br(substr($entry['content'], 0, 100). "...");
         echo '</div>';
         echo '</a>';
     }
 
     echo '</div>';
-    echo '<div class="col col-md-8">';
+    echo '<div class="col col-sm-8">';
 
     if (empty($entries)){
         echo "<h2>Hoppla! Keine Blogeinträge gefunden.</h2>";
@@ -37,7 +37,7 @@
     else
         foreach ($entries as $entry){
             if (isset($_GET['eid'])){
-                echo "<h2>".$entry['title'].", ".gmdate("Y.m.d, H:i:s", $entry['datetime'])."</h2><br>";
+                echo "<h2>".$entry['title'].", ".gmdate("Y.m.d, H:i:s", $entry['datetime'])."</h2>";
                 echo nl2br($entry['content']);
                 echo '<form method="post">';
                 echo '<button type="submit" name="delete-entry" value=' . $entry['eid'] . 'id="delete-entry">Lösche diesen Beitrag</button>';
@@ -51,6 +51,7 @@
         }
     }
 
+    echo '</div>';
     echo '</div>';
 ?>
 
