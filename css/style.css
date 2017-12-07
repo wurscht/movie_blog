@@ -8,3 +8,16 @@
   width: 600px;
   height: 300px;
 }
+
+/*Content*/
+
+.content {
+  width: 60%;
+  margin: 50px auto 50px auto;
+  padding-top: 20px;
+}
+
+/*Header*/
+.header {
+  width: 100%;
+}
