@@ -1,15 +1,19 @@
 <?php
+if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
+    addEntry($blogId, $_POST['titel'], $_POST['inhalt']);
+    header("Location: index.php?function=entries_public&bid=" . $blogId);
+}
+echo $blogId;
 
-$entries = getEntries($blogId);
 $blogs = getUserNames();
 
-foreach ($entries as $entry){
-    $titel = $entry['title'];
-    $inhlat = $entry['content'];
+foreach ($blogId as $blog){
+    $titel = $blog['title'];
+    $inhlat = $blog['content'];
 }
 
 if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
-    updateEntry($userId, $_POST['titel'], $_POST['inhalt']);
+    updateEntry($blogId, $_POST['titel'], $_POST['inhalt']);
     header ("Location: index.php?function=entries_public");
 }
 ?>
