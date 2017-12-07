@@ -13,7 +13,7 @@
     }
 
     //delete and edit icon
-    $edit_icon = "<i class=\"fa fa-pencil-square-o \"></i>";
+    $edit_icon = "<a href='index.php?function=edit_entry&bid=$blogId'><i class=\"fa fa-pencil-square-o \"></i></a>";
     $delete_icon = "<button type=\"submit\" name=\"delete-entry\" value='" . $shown_entry['eid'] . "'id=\"delete-entry\"><i class=\"fa  fa-trash-o \"></i></button>";
 
     foreach ($blogs as $blog) {
