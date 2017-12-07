@@ -20,4 +20,25 @@
 /*Header*/
 .header {
   width: 100%;
+  margin-top: 50px;
+}
+
+
+
+
+/*delete and edit icon*/
+h2 button{
+  background:none;
+  border: none;
+}
+i.fa.fa-trash-o {
+  color: red;
+  margin-left: 10px;
+}
+
+i.fa.fa-pencil-square-o {
+  margin-left: 10px;
+  color: dodgerblue;
+  border-right: 1px solid black;
+  padding-right: 10px;
 }
