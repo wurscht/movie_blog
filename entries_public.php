@@ -44,6 +44,7 @@
     else {
         if ($eid){
             $shown_entry = getEntry($eid);
+            var_dump($shown_entry['eid']);
             echo "<h2>".$shown_entry['title'].", ".gmdate("Y.m.d, H:i:s", $shown_entry['datetime'])."</h2>";
             echo nl2br($shown_entry['content']);
             echo '<form method="post">';
@@ -53,7 +54,7 @@
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['delete-entry'])) {
-            deleteEntry($entry['eid']);
+            deleteEntry($shown_entry['eid']);
             // header("Location: index.php?function=blogs&bid=" . $blogId);
         }
     }
