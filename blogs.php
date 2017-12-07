@@ -14,7 +14,7 @@
     }
   }
 ?>
-<div class="chooseB">
+
   
 	<!-- <div><a href='index.php?function=blogs&bid=4' title='Blog auswählen'><h4>Anna Abegglen</h4></a></div>
 	<div><a href='index.php?function=blogs&bid=2' title='Blog auswählen'><h4>Hans Hinterseer</h4></a></div>

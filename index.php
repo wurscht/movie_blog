@@ -25,12 +25,12 @@ else $blogId = 0;
       Die nächsten 4 Zeilen sind Bootstrap, falls nicht gewünscht entfernen.
     -->
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/a951fb7605.js"></script>
     <script src="include/functions.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
     <title>Blog-Projekt</title>
 </head>
 
@@ -60,46 +60,11 @@ else $blogId = 0;
             ?>
         </ul>
     </div>
-    <!--<img class="header_fw" src="images/header.jpg" alt="header">-->
 </nav>
-<div class="carousel slide" id="carousel-662871">
-    <ol class="carousel-indicators">
-        <li class="active" data-slide-to="0" data-target="#carousel-662871">
-        </li>
-        <li data-slide-to="1" data-target="#carousel-662871">
-        </li>
-        <li data-slide-to="2" data-target="#carousel-662871">
-        </li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="item active">
-            <img alt="Carousel Bootstrap First" src="http://lorempixel.com/1200/300" />
-            <div class="carousel-caption">
-                <h4>
-                    First Thumbnail label
-                </h4>
-            </div>
-        </div>
-        <div class="item">
-            <img alt="Carousel Bootstrap Second" src="http://lorempixel.com/1200/300" />
-            <div class="carousel-caption">
-                <h4>
-                    Second Thumbnail label
-                </h4>
-            </div>
-        </div>
-        <div class="item">
-            <img alt="Carousel Bootstrap Third" src="http://lorempixel.com/1200/300" />
-            <div class="carousel-caption">
-                <h4>
-                    Third Thumbnail label
-                </h4>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#carousel-662871" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-662871" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-</div>
-<div class="container" style="margin-top:80px">
+<img class="header" alt="Header Movie Blog" src="images/Filmstrip-Logo.png" />
+<br>
+
+<div class="content">
     <?php
     // Für jede Funktion, die mit ?function=xy in der URL übergeben wird, muss eine Datei (in diesem Fall xy.php) existieren.
     // Diese Datei wird aufgerufen, um den Content der Seite aufzubereiten und anzuzeigen.
