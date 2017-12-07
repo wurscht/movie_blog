@@ -9,7 +9,12 @@
     $blogs = getUserNames();
     if (isset($_GET['eid'])) {
     $eid = $_GET['eid'];
+    $shown_entry = getEntry($eid);
     }
+
+    //delete and edit icon
+    $edit_icon = "<i class=\"fa fa-pencil-square-o \"></i>";
+    $delete_icon = "<button type=\"submit\" name=\"delete-entry\" value='" . $shown_entry['eid'] . "'id=\"delete-entry\"><i class=\"fa  fa-trash-o \"></i></button>";
 
     foreach ($blogs as $blog) {
         if ($blog['uid'] == $blogId) {
@@ -43,9 +48,7 @@
         }
     else {
         if ($eid){
-            $shown_entry = getEntry($eid);
-            var_dump($shown_entry['eid']);
-            echo "<h2>".$shown_entry['title'].", ".gmdate("Y.m.d, H:i:s", $shown_entry['datetime'])."</h2>";
+            echo "<h2>".$shown_entry['title'].", ".gmdate("Y.m.d, H:i:s", $shown_entry['datetime']). $edit_icon . $delete_icon . "</h2>";
             echo nl2br($shown_entry['content']);
             echo '<form method="post">';
             echo '<button type="submit" name="delete-entry" value=' . $shown_entry['eid'] . 'id="delete-entry">Lösche diesen Beitrag</button>';
@@ -55,7 +58,7 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['delete-entry'])) {
             deleteEntry($shown_entry['eid']);
-            // header("Location: index.php?function=blogs&bid=" . $blogId);
+            header("Location: index.php?function=entries_public&bid=" . $blogId);
         }
     }
 
