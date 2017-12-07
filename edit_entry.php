@@ -1,21 +1,17 @@
 <?php
-if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
-    addEntry($blogId, $_POST['titel'], $_POST['inhalt']);
-    header("Location: index.php?function=entries_public&bid=" . $blogId);
-}
-echo $blogId;
 
-$blogs = getUserNames();
+if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
+    updateEntry($blogId, $_POST['titel'], $_POST['inhalt']);
+    header ("Location: index.php?function=entries_public");
+}
+
+echo $blogId;
 
 foreach ($blogId as $blog){
     $titel = $blog['title'];
     $inhlat = $blog['content'];
 }
 
-if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
-    updateEntry($blogId, $_POST['titel'], $_POST['inhalt']);
-    header ("Location: index.php?function=entries_public");
-}
 ?>
 
 <form method="post" action="">
@@ -25,7 +21,7 @@ if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
     </div>
     <label for="inhalt">Inhalt</label>
     <div>
-        <textarea type="text" id="inhalt" class="inhalt" required="required" name="inhalt" placeholder="Gib einen Inhalt ein" value=""><?php echo $inhlat ?></textarea>
+        <textarea type="text" id="inhalt" class="inhalt" required="required" name="inhalt" placeholder="Gib einen Inhalt ein" value=""><?php echo $inhalt ?></textarea>
     </div>
     <div>
         <button type="submit">speichern</button>
