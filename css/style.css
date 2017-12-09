@@ -23,7 +23,16 @@
   margin-top: 50px;
 }
 
+.loggedin {
+    margin-top: 16px;
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #777;
+}
 
+.blog_name {
+    padding-left: 15px;
+}
 
 
 /*delete and edit icon*/
@@ -42,3 +51,4 @@ i.fa.fa-pencil-square-o {
   border-right: 1px solid black;
   padding-right: 10px;
 }
+

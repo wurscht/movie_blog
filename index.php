@@ -55,7 +55,7 @@ else $blogId = 0;
               echo "<li><a href='index.php?function=entries_member&bid=$blogId'>Beiträge anzeigen</a></li>";
               echo "<li><a href='index.php?function=add_entry&bid=$blogId'>Beitrag hinzufügen</a></li>";
               echo "<li><a href='index.php?function=logout&bid=$blogId'>Logout</a></li>";
-              echo "<li>Youe are logged in as" . " " . getUserName($userId) . "</li>";
+              echo "<li class='loggedin'>Youe are logged in as" . " " . getUserName($userId) . "</li>";
             }
             ?>
         </ul>

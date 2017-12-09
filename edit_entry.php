@@ -1,16 +1,17 @@
 <?php
 
+if (isset($_GET['eid'])) {
+    $eid = $_GET['eid'];
+    $shown_entry = getEntry($eid);
+}
+
 if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
-    updateEntry($blogId, $_POST['titel'], $_POST['inhalt']);
-    header ("Location: index.php?function=entries_public");
+    updateEntry($eid, $_POST['titel'], $_POST['inhalt']);
+    header("Location: index.php?function=entries_member&bid=" . $blogId);
 }
 
-echo $blogId;
-
-foreach ($blogId as $blog){
-    $titel = $blog['title'];
-    $inhlat = $blog['content'];
-}
+    $titel = $shown_entry['title'];
+    $inhalt = $shown_entry['content'];
 
 ?>
 

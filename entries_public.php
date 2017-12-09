@@ -14,7 +14,7 @@
     foreach ($blogs as $blog) {
         if ($blog['uid'] == $blogId) {
             echo '<div class="blog">';
-            echo "<p>" . $blog['name']."</p>";
+            echo "<p class='blog_name'>Entries of " . $blog['name']."</p>";
             echo '</div>';
         }
     }

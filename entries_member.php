@@ -13,14 +13,14 @@
 
     //delete and edit icon
     if (isset($shown_entry['eid'])) {
-      $edit_icon = "<a href='index.php?function=edit_entry&bid=$blogId'><i class=\"fa fa-pencil-square-o \"></i></a>";
+      $edit_icon = "<a href='index.php?function=edit_entry&bid=$blogId&eid=$eid'><i class=\"fa fa-pencil-square-o \"></i></a>";
       $delete_icon = "<button type=\"submit\" name=\"delete-entry\" value='" . $shown_entry['eid'] . "'id=\"delete-entry\"><i class=\"fa  fa-trash-o \"></i></button>";
     }
 
     foreach ($blogs as $blog) {
         if ($blog['uid'] == $blogId) {
             echo '<div class="blog">';
-            echo "<p>" . $blog['name']."</p>";
+            echo "<p class='blog_name'>Entries of " . $blog['name']."</p>";
             echo '</div>';
         }
     }
