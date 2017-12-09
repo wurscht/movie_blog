@@ -49,17 +49,16 @@
         }
     else {
         if ($eid){
-            echo "<h2>".$shown_entry['title'].", ".gmdate("Y.m.d, H:i:s", $shown_entry['datetime']). $edit_icon . $delete_icon . "</h2>";
-            echo nl2br($shown_entry['content']);
             echo '<form method="post">';
-            echo '<button type="submit" name="delete-entry" value=' . $shown_entry['eid'] . 'id="delete-entry">Lösche diesen Beitrag</button>';
+            echo "<h2>".$shown_entry['title'].", ".gmdate("Y.m.d, H:i:s", $shown_entry['datetime']). $edit_icon . $delete_icon . "</h2>";
             echo '</form>';
+            echo nl2br($shown_entry['content']);
         }
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['delete-entry'])) {
             deleteEntry($shown_entry['eid']);
-            header("Location: index.php?function=entries_public&bid=" . $blogId);
+            header("Location: index.php?function=entries_member&bid=" . $blogId);
         }
     }
 

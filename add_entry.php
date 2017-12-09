@@ -2,7 +2,7 @@
 
 if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
     addEntry($blogId, $_POST['titel'], $_POST['inhalt']);
-    header("Location: index.php?function=entries_public&bid=" . $blogId);
+    header("Location: index.php?function=entries_member&bid=" . $blogId);
 }
 ?>
 
