@@ -24,14 +24,14 @@
 }
 
 .loggedin {
-    margin-top: 16px;
-    font-family: Helvetica;
-    font-size: 14px;
-    color: #777;
+  margin-top: 16px;
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #777;
 }
 
 .blog_name {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 
@@ -52,3 +52,7 @@ i.fa.fa-pencil-square-o {
   padding-right: 10px;
 }
 
+/* Edit Entry */
+.error-message {
+  color: red;
+}

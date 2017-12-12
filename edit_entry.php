@@ -5,13 +5,17 @@ if (isset($_GET['eid'])) {
     $shown_entry = getEntry($eid);
 }
 
-if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
-    updateEntry($eid, $_POST['titel'], $_POST['inhalt']);
-    header("Location: index.php?function=entries_member&bid=" . $blogId);
-}
+$titel = $shown_entry['title'];
+$inhalt = $shown_entry['content'];
 
-    $titel = $shown_entry['title'];
-    $inhalt = $shown_entry['content'];
+if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
+    if (strlen($_POST['titel']) >= 3 and strlen($_POST['inhalt']) >= 10) {
+        updateEntry($eid, $_POST['titel'], $_POST['inhalt']);
+        header("Location: index.php?function=entries_member&bid=" . $blogId);
+    } else {
+        echo "<p class='error-message'>Der Titel muss mindestens 3 Zeichen, der Inhalt mindestens 10 Zeichen beinhalten</p>";
+    }
+}
 
 ?>
 
@@ -25,9 +29,7 @@ if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
         <textarea type="text" id="inhalt" class="inhalt" required="required" name="inhalt" placeholder="Gib einen Inhalt ein" value=""><?php echo $inhalt ?></textarea>
     </div>
     <div>
-        <button type="submit">speichern</button>
-        <form action="index.php?function=blogs&bid=0">
-            <input type="submit" value="abbrechen">
-        </form>
+        <button type="submit" class="btn btn-success">speichern</button>
+        <a href="index.php?function=entries_member&bid=<?php echo $blogId; ?>" class="btn btn-danger">abbrechen</a> 
     </div>
 </form>
