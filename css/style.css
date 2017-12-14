@@ -20,7 +20,6 @@
 /*Header*/
 .header {
   width: 100%;
-  margin-top: 50px;
 }
 
 .loggedin {
@@ -55,4 +54,35 @@ i.fa.fa-pencil-square-o {
 /* Edit Entry */
 .error-message {
   color: red;
+}
+
+/*Log in*/
+
+.Login_form input {
+  height: 40px;
+  width: 300px;
+  padding-left: 10px;
+}
+
+.Login_form label {
+  padding: 10px 0;
+}
+
+.Login_form button {
+  margin-top: 10px;
+  height: 30px;
+  width: 100px;
+}
+
+/*Navbar*/
+
+ul.navbar{
+  text-decoration: none;
+  list-style: none;
+  /* padding-right: 40px; */
+}
+
+li {
+  padding-right: 40px;
+  text-align: center;
 }

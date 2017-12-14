@@ -23,7 +23,8 @@
   // Unten auf der Seite Anzeige der Fehlermeldung.
 
 ?>
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']."?function=login"; ?>">
+<div class="row">
+<form class="Login_form col-sm-6 offset-md-4" method="post" action="<?php echo $_SERVER['PHP_SELF']."?function=login"; ?>">
   <label for="email">Benutzername</label>
   <div>
 	<input type="email" id="email" name="email" placeholder="E-Mail" value="" />
@@ -33,6 +34,7 @@
 	<input type="password" id="passwort" name="passwort" placeholder="Passwort" value="" />
   </div>
   <div>
-	<button type="submit">senden</button>
+	<button type="submit">Anmelden</button>
   </div>
 </form>
+</div>

@@ -39,12 +39,10 @@ else $blogId = 0;
   nav, div und ul class="..." ist Bootstrap, falls nicht gewünscht entfernen oder anpassen.
   Die Einteilung der Website in verschiedene Bereiche (Menü-, Content-Bereich, usw.) kann auch selber mit div realisiert werden.
 -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<img class="header" alt="Header Movie Blog" src="images/Filmstrip-Logo.png" />
+<nav class="navbar navbar-inverse bg-dark>
     <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand"><?php echo "Movie Blog"; ?></a>
-        </div>
-        <ul class="nav navbar-nav">
+        <ul class="navbar navbar-dark sticky-top bg-faded">
             <?php
             if ($userId == 0) {
               echo "<li><a href='index.php?function=login&bid=$blogId'>Login</a></li>";
@@ -61,7 +59,7 @@ else $blogId = 0;
         </ul>
     </div>
 </nav>
-<img class="header" alt="Header Movie Blog" src="images/Filmstrip-Logo.png" />
+
 <br>
 
 <div class="content">
