@@ -11,6 +11,13 @@
     $shown_entry = getEntry($eid);
     }
 
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset($_POST['delete-entry'])) {
+            deleteEntry($shown_entry['eid']);
+            header("Location: index.php?function=entries_member&bid=" . $blogId);
+        }
+    }
+
     //delete and edit icon
     if (isset($shown_entry['eid'])) {
       $edit_icon = "<a href='index.php?function=edit_entry&bid=$blogId&eid=$eid'><i class=\"fa fa-pencil-square-o \"></i></a>";
@@ -55,12 +62,7 @@
         }
     }
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['delete-entry'])) {
-            deleteEntry($shown_entry['eid']);
-            header("Location: index.php?function=entries_member&bid=" . $blogId);
-        }
-    }
+   
 
     echo '</div>';
     echo '</div>';

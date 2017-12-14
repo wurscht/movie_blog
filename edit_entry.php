@@ -5,9 +5,6 @@ if (isset($_GET['eid'])) {
     $shown_entry = getEntry($eid);
 }
 
-$titel = $shown_entry['title'];
-$inhalt = $shown_entry['content'];
-
 if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
     if (strlen($_POST['titel']) >= 3 and strlen($_POST['inhalt']) >= 10) {
         updateEntry($eid, $_POST['titel'], $_POST['inhalt']);
@@ -16,6 +13,9 @@ if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
         echo "<p class='error-message'>Der Titel muss mindestens 3 Zeichen, der Inhalt mindestens 10 Zeichen beinhalten</p>";
     }
 }
+
+$titel = $shown_entry['title'];
+$inhalt = $shown_entry['content'];
 
 ?>
 
