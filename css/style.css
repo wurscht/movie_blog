@@ -23,8 +23,6 @@
 }
 
 .loggedin {
-  margin-top: 16px;
-  font-family: Helvetica;
   font-size: 14px;
   color: #777;
 }
@@ -51,12 +49,7 @@ i.fa.fa-pencil-square-o {
   padding-right: 10px;
 }
 
-/* Edit Entry */
-.error-message {
-  color: red;
-}
-
-/*Log in*/
+/*Log in/out*/
 
 .Login_form input {
   height: 40px;
@@ -74,15 +67,33 @@ i.fa.fa-pencil-square-o {
   width: 100px;
 }
 
-/*Navbar*/
-
-ul.navbar{
-  text-decoration: none;
-  list-style: none;
-  /* padding-right: 40px; */
+.btn-primary a {
+  color: white;
 }
 
+.logout-area{
+  float: right;
+}
+
+/*Navbar*/
+
+ul.navbar {
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0;
+  line-height: 2;
+}
 li {
   padding-right: 40px;
   text-align: center;
+}
+
+li.navbar-li {
+  display: inline-block;
+}
+
+nav.navbar {
+  background-color: #292b2c;
 }

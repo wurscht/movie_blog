@@ -25,12 +25,12 @@ else $blogId = 0;
       Die nächsten 4 Zeilen sind Bootstrap, falls nicht gewünscht entfernen.
     -->
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/a951fb7605.js"></script>
     <script src="include/functions.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
     <title>Blog-Projekt</title>
 </head>
 
@@ -45,15 +45,17 @@ else $blogId = 0;
         <ul class="navbar navbar-dark sticky-top bg-faded">
             <?php
             if ($userId == 0) {
-              echo "<li><a href='index.php?function=login&bid=$blogId'>Login</a></li>";
-              echo "<li><a href='index.php?function=blogs&bid=$blogId'>Blog wählen</a></li>";
-              echo "<li><a href='index.php?function=entries_public&bid=$blogId'>Beiträge anzeigen</a></li>";
+              echo "<li class='navbar-li'><a href='index.php?function=login&bid=$blogId'>Login</a></li>";
+              echo "<li class='navbar-li'><a href='index.php?function=blogs&bid=$blogId'>Blog wählen</a></li>";
+              echo "<li class='navbar-li'><a href='index.php?function=entries_public&bid=$blogId'>Beiträge anzeigen</a></li>";
             } else {
-              echo "<li><a href='index.php?function=blogs&bid=$blogId'>Blog wählen</a></li>";
-              echo "<li><a href='index.php?function=entries_member&bid=$blogId'>Beiträge anzeigen</a></li>";
-              echo "<li><a href='index.php?function=add_entry&bid=$blogId'>Beitrag hinzufügen</a></li>";
-              echo "<li><a href='index.php?function=logout&bid=$blogId'>Logout</a></li>";
-              echo "<li class='loggedin'>Youe are logged in as" . " " . getUserName($userId) . "</li>";
+              echo "<li class='navbar-li'><a href='index.php?function=blogs&bid=$blogId'>Blog wählen</a></li>";
+              echo "<li class='navbar-li'><a href='index.php?function=entries_member&bid=$blogId'>Beiträge anzeigen</a></li>";
+              echo "<li class='navbar-li'><a href='index.php?function=add_entry&bid=$blogId'>Beitrag hinzufügen</a></li>";
+              echo "<div class='logout-area'>";
+              echo "<li class='loggedin navbar-li'>Youe are logged in as" . " " . getUserName($userId) . "</li>";
+              echo "<button type='button' class='btn btn-primary'><a href='index.php?function=logout&bid=$blogId'>Logout</a></button>";
+              echo "</div>";
             }
             ?>
         </ul>
