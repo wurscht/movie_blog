@@ -6,7 +6,9 @@
 // Prüft, meldet den Benutzer an
     if (isset($_POST['email']) and isset($_POST['passwort'])) {
         if (getUserIdFromDb($_POST['email'], $_POST['passwort']) == 0) {
-            echo "Fehler";
+            echo "<div class='error-message col-md-6 offset-md-3'>";
+            echo "<p class='alert alert-danger'>Bitte geben Sie eine gültige E-Mail Adresse und Passwort ein</p>";
+            echo "</div>";
         } elseif (getUserIdFromDb($_POST['email'], $_POST['passwort']) > 0) {
             $_SESSION['userId'] = getUserIdFromDb($_POST['email'], $_POST['passwort']);
             header ("Location: index.php?function=blogs&bid=0");
@@ -34,7 +36,7 @@
 	<input type="password" id="passwort" name="passwort" placeholder="Passwort" value="" />
   </div>
   <div>
-	<button type="submit">Anmelden</button>
+	<button type="submit" class="btn btn-primary">Anmelden</button>
   </div>
 </form>
 </div>
