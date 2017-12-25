@@ -25,7 +25,7 @@ if (isset($_POST['titel']) and isset($_POST['inhalt'])) {
     </div>
     <div>
       <button type="submit" class="btn btn-success">speichern</button>
-      <a href="index.php?function=blogs&bid=<?php echo $blogId; ?>" class="btn btn-danger">abbrechen</a>  
+      <a href="index.php?function=blogs_member&bid=<?php echo $blogId; ?>" class="btn btn-danger">abbrechen</a>  
     </div>
   </form>
 </div>

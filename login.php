@@ -11,7 +11,7 @@
             echo "</div>";
         } elseif (getUserIdFromDb($_POST['email'], $_POST['passwort']) > 0) {
             $_SESSION['userId'] = getUserIdFromDb($_POST['email'], $_POST['passwort']);
-            header ("Location: index.php?function=blogs&bid=0");
+            header ("Location: index.php?function=blogs_member&bid=0");
         }
     }
   // $_SERVER['PHP_SELF'] = login.php in diesem Fall (also die PHP-Datei, die gerade ausgeführt wird).
@@ -35,8 +35,8 @@
   <div>
 	<input type="password" id="passwort" name="passwort" placeholder="Passwort" value="" />
   </div>
-  <div>
-	<button type="submit" class="btn btn-primary">Anmelden</button>
+  <div id="login">
+	<input type="submit" class="btn btn-primary" value="Anmelden">
   </div>
 </form>
 </div>
