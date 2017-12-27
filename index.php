@@ -26,7 +26,7 @@ else $blogId = 0;
     -->
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/a951fb7605.js"></script>
     <script src="include/functions.js"></script>
@@ -72,6 +72,7 @@ else $blogId = 0;
     require_once("$function.php");
     ?>
 </div>
+<script src="js/choose_entries.js" type="text/javascript"></script>
 </body>
 </html>
 <?php

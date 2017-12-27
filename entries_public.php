@@ -25,12 +25,15 @@
 
     foreach ($entries as $entry){
         if (isset($entry['eid'])){
-        echo '<a href="index.php?function=entries_public&bid=' . $blogId . '&eid=' . $entry['eid'] . '">';
+        echo '<div class="list-group">';
+        echo '<a class="list-group-item" href="index.php?function=entries_public&bid=' . $blogId . '&eid=' . $entry['eid'] . '">';
         echo '<div class="entry" value="' . $entry['eid'] .'">';
-        echo "<h4>".$entry['title'].", ".gmdate("d.m.Y, H:i:s", $entry['datetime'])."</h4>";
+        echo "<h4>".$entry['title']."</h4>";
+        echo "<p>".gmdate("d.m.Y, H:i:s", $entry['datetime'])."</p>";
         echo nl2br(substr($entry['content'], 0, 100). "...");
         echo '</div>';
         echo '</a>';
+        echo '</div>';
         }
     }
 
