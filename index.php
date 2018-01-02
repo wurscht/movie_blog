@@ -53,6 +53,7 @@ else $blogId = 0;
               echo "<li class='navbar-li'><a href='index.php?function=entries_member&bid=$blogId'>Beiträge anzeigen</a></li>";
               echo "<li class='navbar-li'><a href='index.php?function=add_entry&bid=$blogId'>Beitrag hinzufügen</a></li>";
               echo "<div class='logout-area'>";
+              echo "<li class='navbar-li'><a href='index.php?function=import_export'>Import/Export</a></li>";
               echo "<li class='loggedin navbar-li'>Youe are logged in as" . " " . getUserName($userId) . "</li>";
               echo "<button type='button' class='btn btn-primary'><a href='index.php?function=logout&bid=$blogId'>Logout</a></button>";
               echo "</div>";

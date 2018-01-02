@@ -36,7 +36,7 @@
 	<input type="password" id="passwort" name="passwort" placeholder="Passwort" value="" />
   </div>
   <div id="login">
-	<input type="submit" class="btn btn-primary" value="Anmelden">
+	<input type="submit" class="btn btn-primary login" value="Anmelden">
   </div>
 </form>
 </div>

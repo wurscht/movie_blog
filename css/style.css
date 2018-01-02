@@ -32,7 +32,7 @@
 }
 
 
-/*delete and edit icon*/
+/*Delete and edit icon*/
 h2 button{
   background:none;
   border: none;
@@ -96,4 +96,16 @@ li.navbar-li {
 
 nav.navbar {
   background-color: #292b2c;
+}
+
+/*Import/Export*/
+
+.import {
+    margin-bottom: 10px;
+}
+
+/*Login*/
+
+#login {
+    margin-top: 10px;
 }
