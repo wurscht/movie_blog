@@ -72,7 +72,6 @@ else $blogId = 0;
     require_once("$function.php");
     ?>
 </div>
-<script src="js/choose_entries.js" type="text/javascript"></script>
 </body>
 </html>
 <?php

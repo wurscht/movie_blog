@@ -40,7 +40,11 @@
     foreach ($entries as $entry){
         if (isset($entry['eid'])){
         echo '<div class="list-group">';
-        echo '<a class="list-group-item" href="index.php?function=entries_member&bid=' . $blogId . '&eid=' . $entry['eid'] . '">';
+        if (isset($eid) && $eid == $entry['eid']) {
+            echo '<a class="list-group-item active" href="index.php?function=entries_member&bid=' . $blogId . '&eid=' . $entry['eid'] . '">';
+        } else {
+            echo '<a class="list-group-item" href="index.php?function=entries_member&bid=' . $blogId . '&eid=' . $entry['eid'] . '">';
+        }
         echo '<div class="entry" value="' . $entry['eid'] .'">';
         echo "<h4>".$entry['title']."</h4>";
         echo "<p>".gmdate("d.m.Y, H:i:s", $entry['datetime'])."</p>";
