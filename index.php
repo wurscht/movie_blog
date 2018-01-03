@@ -40,7 +40,7 @@ else $blogId = 0;
   Die Einteilung der Website in verschiedene Bereiche (Menü-, Content-Bereich, usw.) kann auch selber mit div realisiert werden.
 -->
 <img class="header" alt="Header Movie Blog" src="images/Filmstrip-Logo.png" />
-<nav class="navbar navbar-inverse bg-dark>
+<nav class="navbar navbar-inverse bg-dark">
     <div class="container">
         <ul class="navbar navbar-dark sticky-top bg-faded">
             <?php
