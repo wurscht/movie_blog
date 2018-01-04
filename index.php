@@ -73,6 +73,12 @@ else $blogId = 0;
     require_once("$function.php");
     ?>
 </div>
+<footer class="footer">
+    <div class="container">
+        <div class="col-md-6 footer-left">Made by Jonas, Mirjam, Hava</div>
+        <div class="col-md-6 footer-right">SWAG</div>
+    </div>
+</footer>
 </body>
 </html>
 <?php

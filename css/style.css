@@ -99,10 +99,31 @@ nav.navbar {
 }
 
 /*Import/Export*/
-
-.import {
-    margin-bottom: 10px;
+.import, .export {
+  margin-bottom: 10px;
+  width: 25%;
+  margin-left: 37%;
 }
+
+/*Footer*/
+.footer-left{
+  float: left;
+}
+.footer-right{
+  float:right;
+  text-align: right;
+}
+
+footer {
+  color: #007bff;
+  background: #343a40;
+  height: 55px;
+  padding: 15px;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+
 
 /*Login*/
 
