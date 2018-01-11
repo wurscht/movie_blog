@@ -131,6 +131,14 @@ nav.navbar {
   padding: 0;
 }
 
+a.nav-a:active,
+a.nav-a:hover {
+  border-top: 3px solid #6495ED;
+  border-bottom: 3px solid #6495ED;
+  color: #6495ED;
+  padding: 6px 0;
+}
+
 /*Import/Export*/
 .import, .export {
   margin-bottom: 10px;
