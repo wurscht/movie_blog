@@ -76,7 +76,7 @@ else $blogId = 0;
 <footer class="footer">
     <div class="container">
         <div class="col-md-6 footer-left">Made by Jonas, Mirjam, Hava</div>
-        <div class="col-md-6 footer-right">M-s133</div>
+        <div class="col-md-6 footer-right">M-133</div>
     </div>
 </footer>
 </body>
