@@ -45,15 +45,15 @@ else $blogId = 0;
         <ul class="navbar navbar-dark sticky-top bg-faded">
             <?php
             if ($userId == 0) {
-              echo "<li class='navbar-li'><a href='index.php?function=login&bid=$blogId'>Login</a></li>";
-              echo "<li class='navbar-li'><a href='index.php?function=blogs_public&bid=$blogId'>Blog wählen</a></li>";
-              echo "<li class='navbar-li'><a href='index.php?function=entries_public&bid=$blogId'>Beiträge anzeigen</a></li>";
+              echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=login&bid=$blogId'>Login</a></li>";
+              echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=blogs_public&bid=$blogId'>Blog wählen</a></li>";
+              echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=entries_public&bid=$blogId'>Beiträge anzeigen</a></li>";
             } else {
-              echo "<li class='navbar-li'><a href='index.php?function=blogs_member&bid=$blogId'>Blog wählen</a></li>";
-              echo "<li class='navbar-li'><a href='index.php?function=entries_member&bid=$blogId'>Beiträge anzeigen</a></li>";
-              echo "<li class='navbar-li'><a href='index.php?function=add_entry&bid=$blogId'>Beitrag hinzufügen</a></li>";
+              echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=blogs_member&bid=$blogId'>Blog wählen</a></li>";
+              echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=entries_member&bid=$blogId'>Beiträge anzeigen</a></li>";
+              echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=add_entry&bid=$blogId'>Beitrag hinzufügen</a></li>";
               echo "<div class='logout-area'>";
-              echo "<li class='navbar-li'><a href='index.php?function=import_export'>Import/Export</a></li>";
+              echo "<li class='navbar-li'><a  class='nav-a' href='index.php?function=import_export'>Import/Export</a></li>";
               echo "<li class='loggedin navbar-li'>Youe are logged in as" . " " . getUserName($userId) . "</li>";
               echo "<button type='button' class='btn btn-primary'><a href='index.php?function=logout&bid=$blogId'>Logout</a></button>";
               echo "</div>";
