@@ -17,14 +17,24 @@
   padding-top: 20px;
 }
 
+input.btn.btn-primary.login {
+  width: 30%;
+  margin: auto 65px;
+}
+
 /*Header*/
 .header {
   width: 100%;
 }
 
 .loggedin {
-  font-size: 14px;
+  font-size: 12px !important;
   color: #777;
+}
+
+input.btn.btn-primary.login {
+  width: 30%;
+  margin: auto 65px;
 }
 
 .blog_name {
@@ -75,6 +85,13 @@ i.fa.fa-pencil-square-o {
   float: right;
 }
 
+.list-group-item.active {
+  z-index: 0;
+  color: #fff;
+  background-color: #6495ED;
+  border-color: #6495ED;
+}
+
 /*Navbar*/
 
 ul.navbar {
@@ -83,7 +100,7 @@ ul.navbar {
   display: inline-block;
   width: 100%;
   margin-bottom: 0;
-  line-height: 2;
+  line-height: 3;
 }
 li {
   padding-right: 40px;
@@ -92,10 +109,24 @@ li {
 
 li.navbar-li {
   display: inline-block;
+  font-size: 17px;
 }
 
 nav.navbar {
   background-color: #292b2c;
+}
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0;
 }
 
 /*Import/Export*/
@@ -115,7 +146,7 @@ nav.navbar {
 }
 
 footer {
-  color: #007bff;
+  color: #6495ED;
   background: #343a40;
   height: 55px;
   padding: 15px;
@@ -129,4 +160,18 @@ footer {
 
 #login {
     margin-top: 10px;
+}
+
+a{
+  text-decoration: none !important;
+  color: #6495ED;
+}
+
+.list-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 5px;
 }
