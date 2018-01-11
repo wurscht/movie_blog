@@ -25,8 +25,13 @@
 
     while($line = fgets($importFile)){
       $words = explode (";", $line);
-    
-      addUser($words[0], $words[1], $words[2], 1);
+      
+      if (userExists($words[1])) {
+        return false;
+      } else {
+        addUser($words[0], $words[1], $words[2], 1);
+        return true;
+      }
     }
   }
 
