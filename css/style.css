@@ -10,11 +10,13 @@
 }
 
 /*Content*/
-
+body{
+  background-color: #efefef;
+}
 .content {
   width: 60%;
   margin: 50px auto 80px auto;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
 }
 
 input.btn.btn-primary.login {
@@ -174,4 +176,12 @@ a{
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 5px;
+}
+
+/* strip right */
+img.strip-right {
+  transform: rotate(90deg);
+  position: absolute;
+  right: 0;
+  top: 585px;
 }
