@@ -37,13 +37,11 @@
 
   // Exportiert User in export.csv Datei
   function exportUsers() {
-      $exportfile = fopen("exchange/export.csv", "w");
+      $exportfile = "exchange/export.csv";
       $users = getUsers();
       foreach ($users as $user){
-        $string =  "Hallo";
-          //$user[0] . ";" . $user[1] . ";" . $user[2] . ";" . $user[3] . ";" . $user[4];
-        fwrite($exportfile, $string);
-        fclose($exportfile);
+            $string = $user[0] . ";" . $user[1] . ";" . $user[2] . ";" . $user[3] . "\r\n";
+            file_put_contents($exportfile, $string, FILE_APPEND);
       }
   }
 ?>

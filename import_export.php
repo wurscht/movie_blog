@@ -1,12 +1,13 @@
 <?php
 if(isset($_POST['import'])){
     if (importUsers()) {
-      echo "<p class='col-sm-6 offset-md-3 alert alert-success'>User wurden aus der Datei in die Datenbank importiert</p>";
+      echo "<p class='col-sm-6 offset-md-3 alert alert-success'>User wurden aus der Datei import.csv in die Datenbank importiert</p>";
     } else {
       echo "<p class='col-sm-6 offset-md-3 alert alert-danger'>User sind bereits in der Datenbank</p>";
     }
 }elseif(isset($_POST['export'])){
     exportUsers();
+    echo "<p class='col-sm-6 offset-md-3 alert alert-success'>User wurden aus der Datenbank in die Datei export.csv exportiert</p>";
 }
 ?>
 
