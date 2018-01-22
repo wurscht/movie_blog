@@ -30,9 +30,9 @@
         return false;
       } else {
         addUser($words[0], $words[1], $words[2], 1);
-        return true;
       }
     }
+    return true;
   }
 
   // Exportiert User in export.csv Datei
