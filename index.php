@@ -49,6 +49,7 @@ else $blogId = 0;
               echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=blogs_public&bid=$blogId'>Blog wählen</a></li>";
               echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=entries_public&bid=$blogId'>Beiträge anzeigen</a></li>";
             } else {
+              echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=blogs_public&bid=$blogId'>Blog wählen</a></li>";
               echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=entries_member&bid=$blogId'>Beiträge anzeigen</a></li>";
               echo "<li class='navbar-li'><a class='nav-a' href='index.php?function=add_entry&bid=$blogId'>Beitrag hinzufügen</a></li>";
               echo "<div class='logout-area'>";
